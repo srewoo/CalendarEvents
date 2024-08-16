@@ -1,0 +1,40 @@
+{
+  "maxRetries": 25,
+  "authToken": "Token 260a627dd51f799057a165500720f5438b04fe64",
+  "requestBody": {
+    "bot_name": "Recall AI Meeting Notetaker",
+    "transcription_options": {
+      "provider": "meeting_captions"
+    },
+    "chat": {
+      "on_bot_join": {
+        "send_to": "everyone",
+        "message": "Meeting is being recorded"
+      },
+      "on_participant_join": {
+        "exclude_host": true,
+        "message": "Meeting is being recorded"
+      }
+    },
+    "automatic_leave": {
+      "waiting_room_timeout": 180,
+      "noone_joined_timeout": 90,
+      "everyone_left_timeout": 90
+    },
+    "recording_mode": "gallery_view_v2",
+    "recording_mode_options": {
+      "participant_video_when_screenshare": "beside",
+      "start_recording_on": "participant_join"
+    },
+    "meeting_url": "https://meet.google.com/pdn-jcuz-fkp?authuser=1", 
+    "join_at": "2024-08-12T11:32:00.000Z"
+  },
+  "timeout": 900000,
+  "profiles": [
+    {
+      "name": "Spike Load Profile",
+      "numBots": 20,
+      "spikeIntervals": [0]
+    }
+  ]
+}
